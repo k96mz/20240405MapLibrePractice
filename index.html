@@ -72,6 +72,8 @@
 
         //////////////////////////////////////////////////
 
+        /*
+                // 地理院最適化ベクトルタイル（タイルバージョン）
         style: {
           version: 8,
           name: "Simple Style",
@@ -102,6 +104,47 @@
               type: "line",
               source: "gsi",
               "source-layer": "Cstline",
+              paint: {
+                "line-color": "rgba(0,0,255,1)",
+                "line-width": 2,
+              },
+            },
+          ],
+        },
+        center: [132.652106, 34.418256],
+        zoom: 7,
+      });
+      */
+
+        style: {
+          version: 8,
+          name: "Simple Style",
+          sources: {
+            natural: {
+              type: "vector",
+              minzoom: 1,
+              maxzoom: 16,
+              tiles: [
+                "https://k96mz.github.io/20240405MapLibrePractice/2_vt/{z}/{x}/{y}.pbf",
+              ],
+            },
+          },
+          layers: [
+            {
+              id: "河川",
+              type: "line",
+              source: "natural",
+              "source-layer": "riverl",
+              paint: {
+                "line-color": "rgba(200,200,200,1)",
+                "line-width": 3,
+              },
+            },
+            {
+              id: "海岸線",
+              type: "line",
+              source: "natural",
+              "source-layer": "coastl",
               paint: {
                 "line-color": "rgba(0,0,255,1)",
                 "line-width": 2,
