@@ -131,6 +131,15 @@
           },
           layers: [
             {
+              id: "陸域",
+              type: "fill",
+              source: "natural",
+              "source-layer": "landmass",
+              paint: {
+                "fill-color": "rgba(200,0,0)",
+              },
+            },
+            {
               id: "河川",
               type: "line",
               source: "natural",
@@ -148,15 +157,6 @@
               paint: {
                 "line-color": "rgba(0,0,255,1)",
                 "line-width": 2,
-              },
-            },
-            {
-              id: "陸域",
-              type: "fill",
-              source: "natural",
-              "source-layer": "landmass",
-              paint: {
-                "fill-color": "rgba(200,0,0)",
               },
             },
           ],
