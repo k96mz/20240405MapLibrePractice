@@ -1,0 +1,44 @@
+{
+  "version": 8,
+  "name": "Simple Style",
+  "sources": {
+    "natural": {
+      "type": "vector",
+      "tiles": [
+        "https://k96mz.github.io/20240405MapLibrePractice/2_vt/{z}/{x}/{y}.pbf"
+      ]
+    }
+  },
+  "layers": [
+    {
+      "id": "陸域",
+      "type": "fill",
+      "source": "natural",
+      "source-layer": "landmass",
+      "paint": {
+        "fill-color": "rgba(200,100,0)",
+        "fill-opacity": 0.5
+      }
+    },
+    {
+      "id": "河川",
+      "type": "line",
+      "source": "natural",
+      "source-layer": "riverl",
+      "paint": {
+        "line-color": "rgba(200,200,200,1)",
+        "line-width": 3
+      }
+    },
+    {
+      "id": "海岸線",
+      "type": "line",
+      "source": "natural",
+      "source-layer": "coastl",
+      "paint": {
+        "line-color": "rgba(0,0,255,1)",
+        "line-width": 2
+      }
+    }
+  ]
+}
